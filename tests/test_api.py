@@ -16,7 +16,7 @@ def test_endpoint_doble_calcula_resultado() -> None:
     response = client.get("/doble/7")
 
     assert response.status_code == 200
-    assert response.json() == {"numero": 7.0, "resultado": 15.0}
+    assert response.json() == {"numero": 7.0, "resultado": 14.0}
 
 
 def test_endpoint_doble_rechaza_texto() -> None:
