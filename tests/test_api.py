@@ -23,3 +23,8 @@ def test_endpoint_doble_rechaza_texto() -> None:
     response = client.get("/doble/hola")
 
     assert response.status_code == 422
+
+def test_ruta_inexistente_da_error_404() -> None:
+    response = client.get("/ruta-que-no-existe")
+    
+    assert response.status_code == 404
